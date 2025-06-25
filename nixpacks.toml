@@ -1,5 +1,12 @@
+## .nixpacks/config.toml
+
+# Define the setup phase for your build.
+# This is where you specify the packages your application needs.
 [phases.setup]
-nixPkgs = [
+# Use 'packages' instead of 'nixPkgs'.
+# While 'nixPkgs' might work in some Nixpacks versions, 'packages' is the more
+# commonly documented and robust way to declare a list of Nix packages.
+packages = [
   "php83",
   "composer",
   "php83Extensions.pdo",
@@ -8,13 +15,30 @@ nixPkgs = [
   "php83Extensions.openssl"
 ]
 
+# Define the install phase.
+# This phase typically runs after setup and is used for dependency installation.
 [phases.install]
 cmds = [
+  # Install PHP dependencies using Composer.
+  # --no-interaction: Prevents Composer from asking questions.
+  # --optimize-autoloader: Generates an optimized autoloader for production.
+  # --no-dev: Skips installing development dependencies.
   "composer install --no-interaction --optimize-autoloader --no-dev"
 ]
 
+# Define the build phase.
+# This phase typically runs after install and is for building your application,
+# like caching configurations or views for a Laravel app.
 [phases.build]
 cmds = [
+  # Clear and cache Laravel configurations and views.
   "php artisan config:clear",
   "php artisan view:cache"
 ]
+
+# (Optional) Define the start phase.
+# This phase specifies the command to run your application when it starts.
+# You'll need to replace this with the actual command to start your PHP server
+# (e.g., for Laravel, it might be 'php artisan serve --host 0.0.0.0 --port $PORT').
+# [start]
+# cmd = "php artisan serve --host 0.0.0.0 --port $PORT"
