@@ -1,0 +1,35 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "nixpacks",
+    "memory": 2048,
+    "swap": 1024,
+    "nixpacks": {
+      "config": {
+        "phases": {
+          "setup": {
+            "nixPkgs": [
+              "php83",
+              "composer",
+              "php83Extensions.pdo",
+              "php83Extensions.pdo_mysql",
+              "php83Extensions.mbstring",
+              "php83Extensions.bcmath",
+              "php83Extensions.openssl"
+            ]
+          },
+          "build": {
+            "cmds": [
+              "composer install --no-interaction --optimize-autoloader --no-dev",
+              "php artisan config:clear",
+              "php artisan view:cache"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "deploy": {
+    "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
+  }
+}

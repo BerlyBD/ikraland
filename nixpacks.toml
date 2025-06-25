@@ -1,15 +1,16 @@
 [phases.setup]
 nixPkgs = [
-  "php82",
+  "php83",  # Gunakan PHP 8.3 yang lebih baru
   "composer",
-  "php82Extensions.pdo",
-  "php82Extensions.mysqli",  # Tambahan untuk MySQL
-  "php82Extensions.mbstring",
-  "php82Extensions.bcmath",
-  "php82Extensions.zip",
-  "php82Extensions.curl",
-  "php82Extensions.xml",
-  "php82Extensions.fileinfo"
+  "php83Extensions.pdo",
+  "php83Extensions.pdo_mysql",
+  "php83Extensions.mbstring",
+  "php83Extensions.bcmath",
+  "php83Extensions.curl",
+  "php83Extensions.xml",
+  "php83Extensions.fileinfo",
+  "php83Extensions.tokenizer",
+  "php83Extensions.openssl"
 ]
 
 [phases.install]
