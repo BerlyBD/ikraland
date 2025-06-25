@@ -1,14 +1,17 @@
 {
-  "name": "berlybd/ikraland-website",
+  "name": "berlybd/ikraland",
   "description": "Laravel Project for Railway Railpack",
   "type": "project",
   "require": {
-    "php": "^8.0",
+    "php": "^8.2",
     "fideloper/proxy": "^4.4",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "laravel/framework": "^9.0",
     "laravel/tinker": "^2.5"
+  },
+  "require-dev": {
+    "laravel/sail": "^1.0.1"
   },
   "autoload": {
     "psr-4": {
@@ -32,5 +35,9 @@
     ]
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "platform-check": false
+  }
 }
