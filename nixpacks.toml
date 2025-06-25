@@ -3,19 +3,25 @@ nixPkgs = [
   "php82",
   "composer",
   "php82Extensions.pdo",
+  "php82Extensions.mysqli",  # Tambahan untuk MySQL
   "php82Extensions.mbstring",
   "php82Extensions.bcmath",
-  "php82Extensions.zip"
+  "php82Extensions.zip",
+  "php82Extensions.curl",
+  "php82Extensions.xml",
+  "php82Extensions.fileinfo"
 ]
 
 [phases.install]
 cmds = [
-  "composer install --no-interaction --prefer-dist --optimize-autoloader"
+  "composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev"
 ]
 
 [phases.build]
 cmds = [
-  "php artisan key:generate --ansi || true"
+  "php artisan config:clear",
+  "php artisan view:cache",
+  "php artisan route:cache"
 ]
 
 [start]
