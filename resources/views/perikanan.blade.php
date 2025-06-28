@@ -6,79 +6,157 @@
   <title>Program Perikanan - IKRALAND</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preload" href="{{ asset('images/logo.png') }}" as="image">
-  <style>
-    .skew-bg {
-      transform: skewY(-2deg);
-      transform-origin: top left;
-    }
-    .skew-content {
-      transform: skewY(2deg);
-    }
-  </style>
+    <style>
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .dropdown-content {
+            display: none;
+        }
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-
-  <!-- Navbar Sticky -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <a href="{{ url('/') }}" class="flex items-center gap-2 group">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo IKRA" class="h-10 w-10 object-contain transition-transform group-hover:scale-105" loading="lazy" />
-        <span class="text-lg font-bold text-green-700 group-hover:text-green-800 transition-colors">IKRALAND</span>
-      </a>
-      <button id="menuToggle" class="md:hidden text-3xl focus:outline-none transition-transform hover:scale-110" aria-label="Toggle menu" aria-expanded="false">
-        ☰
-      </button>
-      <nav id="navMenu" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 mt-4 md:mt-0 absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent px-6 md:px-0 py-4 md:py-0 shadow-lg md:shadow-none z-40 transition-all duration-300 ease-in-out">
-        <div class="relative group">
-          <a href="#" class="font-medium flex items-center gap-1 py-2">
-            Tentang Kami
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </a>
-          <div class="absolute hidden group-hover:block mt-0 bg-gray-800 text-white rounded-b shadow-lg py-2 min-w-[200px]">
-            <a href="{{ url('/tentang/fasilitas') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Fasilitas</a>
-            <a href="{{ url('/pertanian') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Pertanian</a>
-            <a href="{{ url('/perikanan') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Perikanan</a>
-          </div>
+<body>
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center gap-2 group">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo IKRA" class="h-10 w-10 object-contain" loading="lazy" />
+                    <span class="text-lg font-bold text-green-700">IKRALAND</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden text-2xl focus:outline-none" aria-expanded="false">
+                    ☰
+                </button>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex gap-6">
+                    <div class="dropdown group relative">
+                        <button class="dropdown-btn flex items-center gap-1 font-medium">
+                            Tentang Kami
+                            <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                            <a href="/tentang/fasilitas" class="block px-4 py-2 hover:bg-gray-700">Fasilitas</a>
+                            <a href="/pertanian" class="block px-4 py-2 hover:bg-gray-700">Pertanian</a>
+                            <a href="/perikanan" class="block px-4 py-2 hover:bg-gray-700">Perikanan</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/project" class="font-medium">Project</a>
+                    
+                    <div class="dropdown group relative">
+                        <button class="dropdown-btn flex items-center gap-1 font-medium">
+                            Paket Program
+                            <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                            <a href="/programedukasi" class="block px-4 py-2 hover:bg-gray-700">Program Edukasi</a>
+                            <a href="/programrekreasi" class="block px-4 py-2 hover:bg-gray-700">Program Rekreasi</a>
+                            <a href="/programkesehatan" class="block px-4 py-2 hover:bg-gray-700">Program Kesehatan</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/kontak" class="font-medium">Kontak</a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu md:hidden bg-white">
+                <div class="flex flex-col gap-1 py-3">
+                    <div class="dropdown">
+                        <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
+                            Tentang Kami
+                            <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content pl-6">
+                            <a href="/tentang/fasilitas" class="block px-4 py-2 hover:bg-gray-100">Fasilitas</a>
+                            <a href="/pertanian" class="block px-4 py-2 hover:bg-gray-100">Pertanian</a>
+                            <a href="/perikanan" class="block px-4 py-2 hover:bg-gray-100">Perikanan</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/project" class="px-4 py-2 font-medium">Project</a>
+                    
+                    <div class="dropdown">
+                        <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
+                            Paket Program
+                            <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content pl-6">
+                            <a href="/programedukasi" class="block px-4 py-2 hover:bg-gray-100">Program Edukasi</a>
+                            <a href="/programrekreasi" class="block px-4 py-2 hover:bg-gray-100">Program Rekreasi</a>
+                            <a href="/programkesehatan" class="block px-4 py-2 hover:bg-gray-100">Program Kesehatan</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/kontak" class="px-4 py-2 font-medium">Kontak</a>
+                </div>
+            </div>
         </div>
-        
-        <div class="relative group">
-          <a href="{{ url('/project') }}" class="font-medium flex items-center gap-1 py-2">
-            Project
-          </a>
-        </div>
-        
-        <div class="relative group">
-          <a href="#" class="font-medium flex items-center gap-1 py-2">
-            Paket Program
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </a>
-          <div class="absolute hidden group-hover:block mt-0 bg-gray-800 text-white rounded-b shadow-lg py-2 min-w-[200px]">
-            <a href="{{ url('/programedukasi') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Program Edukasi</a>
-            <a href="{{ url('/programrekreasi') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Program Rekreasi</a>
-            <a href="{{ url('/programkesehatan') }}" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Program Kesehatan</a>
-          </div>
-        </div>
-        
-        <a href="{{ url('/kontak') }}"class="font-medium py-2 hover:text-green-600 transition-colors">Kontak</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="{{ url('/tentang') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:text-green-600">Tentang Kami</a>
-        <a href="{{ url('/pertanian') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:text-green-600">Pertanian</a>
-        <a href="{{ url('/perikanan') }}" class="block px-3 py-2 text-base font-medium rounded-md text-green-600 font-bold">Perikanan</a>
-        <a href="{{ url('/kontak') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:text-green-600">Kontak</a>
-      </div>
-    </div>
-  </header>
-
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', function() {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('open');
+            menuButton.textContent = isExpanded ? '☰' : '✕';
+        });
+        
+        // Mobile dropdown functionality
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (window.innerWidth >= 768) return;
+                
+                const dropdown = this.closest('.dropdown');
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('active');
+                });
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown') && window.innerWidth < 768) {
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+            }
+        });
+    });
+    </script>
   <!-- Hero Section -->
   <section class="relative bg-blue-600 text-white py-20 overflow-hidden">
     <div class="absolute inset-0 bg-blue-700 skew-bg"></div>
@@ -197,24 +275,6 @@
     </div>
   </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleBtn = document.getElementById('menuToggle');
-      const navMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menuIcon');
-      const closeIcon = document.getElementById('closeIcon');
-
-      if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener('click', function() {
-          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-          toggleBtn.setAttribute('aria-expanded', !isExpanded);
-          navMenu.classList.toggle('hidden');
-          
-          menuIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
-      }
-    });
   </script>
 </body>
 </html>
