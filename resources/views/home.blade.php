@@ -171,7 +171,7 @@
       </p>
     </div>
     <div class="flex-1 order-1 md:order-2">
-      <img src="{{ asset('images/tentang.jpg') }}" alt="Kegiatan di IKRA Land" class="w-full rounded-lg shadow-xl transition-transform hover:scale-[1.02]" loading="lazy" />
+      <img src="{{ asset('images/IMG20220324110113_01.jpg') }}" alt="Kegiatan di IKRA Land" class="w-full rounded-lg shadow-xl transition-transform hover:scale-[1.02]" loading="lazy" />
     </div>
   </section>
 
@@ -181,13 +181,13 @@
       <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
         <div id="carouselSlides" class="flex transition-transform duration-500 ease-in-out h-full">
           <div class="w-full flex-shrink-0 h-full">
-            <img src="{{ asset('images/slide1.jpg') }}" class="w-full h-full object-cover" alt="Fasilitas di IKRA Land" loading="lazy" />
+            <img src="{{ asset('images/IMG20220324110119_01.jpg') }}" class="w-full h-full object-cover" alt="Fasilitas di IKRA Land" loading="lazy" />
           </div>
           <div class="w-full flex-shrink-0 h-full">
-            <img src="{{ asset('images/slide2.jpg') }}" class="w-full h-full object-cover" alt="Kegiatan pertanian" loading="lazy" />
+            <img src="{{ asset('images/IMG20220324114031.jpg') }}" class="w-full h-full object-cover" alt="Kegiatan pertanian" loading="lazy" />
           </div>
           <div class="w-full flex-shrink-0 h-full">
-            <img src="{{ asset('images/slide3.jpg') }}" class="w-full h-full object-cover" alt="Kegiatan sosial" loading="lazy" />
+            <img src="{{ asset('images/IMG20220324114814.jpg') }}" class="w-full h-full object-cover" alt="Kegiatan sosial" loading="lazy" />
           </div>
         </div>
         <!-- Controls -->
@@ -207,9 +207,12 @@
       <div>
         <h2 class="text-2xl md:text-3xl font-bold mb-4 text-green-700">IKRALAND</h2>
         <p class="text-gray-700 leading-relaxed mb-6 text-lg">
-          IKRALAND adalah sebuah kawasan berbasis sosial, lingkungan dan ekonomi umat yang didirikan untuk mendukung program pemberdayaan masyarakat melalui pertanian, peternakan, dan edukasi rekreatif.
+          Ikraland adalah kawasan wakaf yang dikelola oleh Yayasan Wakaf IKRA Padjadjaran, berlokasi di Desa Padanaan, Kecamatan Paseh, Kabupaten Sumedang. Inisiatif ini dimulai sejak tahun 2018 dengan pembelian lahan seluas 6.000 m². Hingga kini, luas tanah wakaf telah berkembang menjadi 2,7 hektar dan dimanfaatkan untuk berbagai kegiatan produktif seperti pertanian, perikanan, dan edukasi lingkungan.
         </p>
-    </div>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          Lebih dari sekadar lahan, Ikraland hadir sebagai "kelas tanpa dinding" yang mengajak setiap pengunjung untuk belajar langsung dari alam. Dengan konsep eksplorasi dan pembelajaran berbasis pengalaman, kawasan ini memberikan ruang bagi anak-anak, pelajar, maupun masyarakat umum untuk mengenal lebih dekat nilai-nilai keberlanjutan, ketahanan pangan, dan kearifan lokal dalam suasana pedesaan yang asri.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -225,65 +228,62 @@
     </div>
   </section>
 
-
-
   <script>
-          // Carousel Logic
-      let index = 0;
-      let intervalId;
-      const slides = document.getElementById("carouselSlides");
-      const indicators = document.querySelectorAll('.indicator');
+    // Carousel Logic
+    let index = 0;
+    let intervalId;
+    const slides = document.getElementById("carouselSlides");
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (slides && indicators) {
+      const totalSlides = slides.children.length;
       
-      if (slides && indicators) {
-        const totalSlides = slides.children.length;
-        
-        function updateSlide() {
-          slides.style.transform = `translateX(-${index * 100}%)`;
-          indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-green-600', i === index);
-            dot.classList.toggle('bg-gray-400', i !== index);
-          });
-        }
-        
-        function nextSlide() {
-          index = (index + 1) % totalSlides;
-          updateSlide();
-          resetInterval();
-        }
-        
-        function prevSlide() {
-          index = (index - 1 + totalSlides) % totalSlides;
-          updateSlide();
-          resetInterval();
-        }
-        
-        function goToSlide(i) {
-          index = i;
-          updateSlide();
-          resetInterval();
-        }
-        
-        function resetInterval() {
-          clearInterval(intervalId);
-          startInterval();
-        }
-        
-        function startInterval() {
-          intervalId = setInterval(nextSlide, 5000);
-        }
-        
-        updateSlide();
-        startInterval();
-        
-        slides.parentElement.addEventListener('mouseenter', () => {
-          clearInterval(intervalId);
-        });
-        
-        slides.parentElement.addEventListener('mouseleave', () => {
-          startInterval();
+      function updateSlide() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle('bg-green-600', i === index);
+          dot.classList.toggle('bg-gray-400', i !== index);
         });
       }
-    ;
+      
+      function nextSlide() {
+        index = (index + 1) % totalSlides;
+        updateSlide();
+        resetInterval();
+      }
+      
+      function prevSlide() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateSlide();
+        resetInterval();
+      }
+      
+      function goToSlide(i) {
+        index = i;
+        updateSlide();
+        resetInterval();
+      }
+      
+      function resetInterval() {
+        clearInterval(intervalId);
+        startInterval();
+      }
+      
+      function startInterval() {
+        intervalId = setInterval(nextSlide, 5000);
+      }
+      
+      updateSlide();
+      startInterval();
+      
+      slides.parentElement.addEventListener('mouseenter', () => {
+        clearInterval(intervalId);
+      });
+      
+      slides.parentElement.addEventListener('mouseleave', () => {
+        startInterval();
+      });
+    }
   </script>
 </body>
 </html>
