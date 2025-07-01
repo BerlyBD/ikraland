@@ -149,13 +149,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <!-- Gambar 1 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/operasi katarak 1.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/operas1.jpg') }}" 
                  alt="Operasi Katarak 1" 
                  class="h-96 w-auto object-cover health-image">
         </div>
         <!-- Gambar 2 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/operasi katarak 2.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/operasi2.jpg') }}" 
                  alt="Operasi Katarak 2" 
                  class="h-96 w-auto object-cover health-image">
         </div>
@@ -168,25 +168,25 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Gambar 1 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 1.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/kacamata1.jpg') }}" 
                  alt="Pemberian Kacamata Gratis 1" 
                  class="h-64 w-auto object-cover health-image">
         </div>
         <!-- Gambar 2 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 2.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/kacamata2.jpg') }}" 
                  alt="Pemberian Kacamata Gratis 2" 
                  class="h-64 w-auto object-cover health-image">
         </div>
         <!-- Gambar 3 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 3.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/kacamata3.jpg') }}" 
                  alt="Pemberian Kacamata Gratis 3" 
                  class="h-64 w-auto object-cover health-image">
         </div>
         <!-- Gambar 4 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 4.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/kacamata4.jpg') }}" 
                  alt="Pemberian Kacamata Gratis 4" 
                  class="h-64 w-auto object-cover health-image">
         </div>
@@ -199,13 +199,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Gambar 1 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemeriksaan mata 1.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/periksa1.jpg') }}" 
                  alt="Pemeriksaan Mata 1" 
                  class="h-80 w-auto object-cover health-image">
         </div>
         <!-- Gambar 2 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-            <img src="{{ asset('images/programkesehatan/pemeriksaan mata 2.jpg') }}" 
+            <img src="{{ asset('images/programkesehatan/periksa2.jpg') }}" 
                  alt="Pemeriksaan Mata 2" 
                  class="h-80 w-auto object-cover health-image">
         </div>
