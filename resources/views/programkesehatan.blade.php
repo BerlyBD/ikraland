@@ -216,7 +216,7 @@
             <div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-6">Screening Katarak</h3>
                 <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-2xl mx-auto">
-                    <img src="{{ asset('images/programkesehatan/screening-katarak-2.jpg') }}" alt="Screening Katarak" class="w-full h-64 object-cover health-image">
+                    <img src="{{ asset('images/programkesehatan/katarak.jpg') }}" alt="Screening Katarak" class="w-full h-64 object-cover health-image">
                 </div>
             </div>
         </div>
