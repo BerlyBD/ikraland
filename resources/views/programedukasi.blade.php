@@ -165,7 +165,7 @@
                             <div class="bg-gray-50 rounded-xl p-8">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/3">
-                            <img src="{{ asset('images/programedukasi/berkebun 1.jpg') }}" alt="Jelajah Tanaman" class="w-full h-64 object-cover rounded-lg edu-image">
+                            <img src="{{ asset('images/programedukasi/berkebun.jpg') }}" alt="Jelajah Tanaman" class="w-full h-64 object-cover rounded-lg edu-image">
                         </div>
                         <div class="md:w-2/3">
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">Kelas Berkebun</h3>
