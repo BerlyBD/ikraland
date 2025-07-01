@@ -222,15 +222,6 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-16 bg-green-700 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Tertarik dengan Program Kami?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Dapatkan informasi lebih lanjut tentang program kesehatan IKRALAND dan bagaimana Anda bisa berpartisipasi.</p>
-            <a href="/kontak" class="inline-block bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">Hubungi Kami</a>
-        </div>
-    </section>
-
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Mobile menu toggle
