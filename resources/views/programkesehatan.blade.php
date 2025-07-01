@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program Edukasi - IKRALAND</title>
+  <title>Program Kesehatan - IKRALAND</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preload" href="{{ asset('images/logo.png') }}" as="image">
      <style>
@@ -24,6 +24,12 @@
         }
         .dropdown.active .dropdown-arrow {
             transform: rotate(180deg);
+        }
+        .health-image {
+            transition: transform 0.3s ease;
+        }
+        .health-image:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -62,7 +68,7 @@
                     
                     <div class="dropdown group relative">
                         <button class="dropdown-btn flex items-center gap-1 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -99,7 +105,7 @@
                     
                     <div class="dropdown">
                         <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -116,6 +122,114 @@
             </div>
         </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-green-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Program Kesehatan IKRALAND</h1>
+                <p class="text-xl max-w-3xl mx-auto">Meningkatkan derajat kesehatan masyarakat melalui berbagai program kesehatan yang terjangkau</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Program Activities Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kegiatan Program Kesehatan</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+            </div>
+
+<!-- Operasi Katarak -->
+<div class="mb-16">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6">Operasi Katarak</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Gambar 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/operasi katarak 1.jpg') }}" 
+                 alt="Operasi Katarak 1" 
+                 class="h-96 w-auto object-cover health-image">
+        </div>
+        <!-- Gambar 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/operasi katarak 2.jpg') }}" 
+                 alt="Operasi Katarak 2" 
+                 class="h-96 w-auto object-cover health-image">
+        </div>
+    </div>
+</div>
+
+<!-- Pemberian Kacamata Gratis -->
+<div class="mb-16">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6">Pemberian Kacamata Gratis</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Gambar 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 1.jpg') }}" 
+                 alt="Pemberian Kacamata Gratis 1" 
+                 class="h-64 w-auto object-cover health-image">
+        </div>
+        <!-- Gambar 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 2.jpg') }}" 
+                 alt="Pemberian Kacamata Gratis 2" 
+                 class="h-64 w-auto object-cover health-image">
+        </div>
+        <!-- Gambar 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 3.jpg') }}" 
+                 alt="Pemberian Kacamata Gratis 3" 
+                 class="h-64 w-auto object-cover health-image">
+        </div>
+        <!-- Gambar 4 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemberian kacamata gratis 4.jpg') }}" 
+                 alt="Pemberian Kacamata Gratis 4" 
+                 class="h-64 w-auto object-cover health-image">
+        </div>
+    </div>
+</div>
+
+<!-- Pemeriksaan Mata -->
+<div class="mb-16">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6">Pemeriksaan Mata</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Gambar 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemeriksaan mata 1.jpg') }}" 
+                 alt="Pemeriksaan Mata 1" 
+                 class="h-80 w-auto object-cover health-image">
+        </div>
+        <!-- Gambar 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
+            <img src="{{ asset('images/programkesehatan/pemeriksaan mata 2.jpg') }}" 
+                 alt="Pemeriksaan Mata 2" 
+                 class="h-80 w-auto object-cover health-image">
+        </div>
+    </div>
+</div>
+
+            <!-- Screening Katarak -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Screening Katarak</h3>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-2xl mx-auto">
+                    <img src="{{ asset('images/programkesehatan/screening-katarak-2.jpg') }}" alt="Screening Katarak" class="w-full h-64 object-cover health-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Tertarik dengan Program Kami?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Dapatkan informasi lebih lanjut tentang program kesehatan IKRALAND dan bagaimana Anda bisa berpartisipasi.</p>
+            <a href="/kontak" class="inline-block bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">Hubungi Kami</a>
+        </div>
+    </section>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -157,59 +271,5 @@
         });
     });
     </script>
-  <!-- Program Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Pilihan Program Kami</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Temukan program yang sesuai dengan kebutuhan edukasi Anda</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Program 1 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/jelajah-tanaman.jpg') }}" alt="Jelajah Tanaman" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Jelajah Tanaman</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-
-        <!-- Program 2 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/petani-cilik.jpg') }}" alt="Petani Cilik" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Petani Cilik</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Program khusus untuk anak usia 5-12 tahun belajar bercocok tanam dengan metode yang menyenangkan dan edukatif.</p>
-          </div>
-        </div>
-
-        <!-- Program 3 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/agro-edu.jpg') }}" alt="Agro Edu Tour" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Agro Edu Tour</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Paket wisata edukasi untuk keluarga dengan pengalaman langsung memanen dan mengolah hasil pertanian.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </body>
 </html>

@@ -25,6 +25,12 @@
         .dropdown.active .dropdown-arrow {
             transform: rotate(180deg);
         }
+        .edu-image {
+            transition: transform 0.3s ease;
+        }
+        .edu-image:hover {
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body>
@@ -62,7 +68,7 @@
                     
                     <div class="dropdown group relative">
                         <button class="dropdown-btn flex items-center gap-1 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -99,7 +105,7 @@
                     
                     <div class="dropdown">
                         <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -116,6 +122,93 @@
             </div>
         </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-green-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Program Edukasi IKRALAND</h1>
+                <p class="text-xl max-w-3xl mx-auto">Belajar langsung dari alam dengan pengalaman edukatif yang menyenangkan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Program Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Program Edukasi</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto">
+                    Alam Ikraland menjadi ruang belajar yang hidup bagi anak-anak untuk mengeksplorasi ilmu secara langsung dan menyenangkan. Program-program edukatif kami meliputi:
+                </p>
+            </div>
+
+            <!-- Program List -->
+            <div class="space-y-12">
+                <!-- Jelajah Tanaman -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <img src="{{ asset('images/programedukasi/jelajah tanaman.jpg') }}" alt="Jelajah Tanaman" class="w-full h-64 object-cover rounded-lg edu-image">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Jelajah Tanaman</h3>
+                            <p class="text-gray-600">
+                                Anak-anak diajak mengenal bagian dan fungsi tumbuhan, melakukan eksplorasi tanaman di Ikraland, menanam dan memanen, serta membuat karya dan mempresentasikannya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kelas Berkebun -->
+                            <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <img src="{{ asset('images/programedukasi/berkebun 1.jpg') }}" alt="Jelajah Tanaman" class="w-full h-64 object-cover rounded-lg edu-image">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Kelas Berkebun</h3>
+                            <p class="text-gray-600">
+                                Kegiatan interaktif untuk anak-anak PAUD/TK dan SD yang mengajak mereka mengenal bagian-bagian tumbuhan dan manfaatnya, dilengkapi dengan praktik menanam secara langsung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sinema Edukasi -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <img src="{{ asset('images/programedukasi/sinema-edukasi.jpg') }}" alt="Sinema Edukasi" class="w-full h-64 object-cover rounded-lg edu-image">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Sinema Edukasi</h3>
+                            <p class="text-gray-600">
+                                Kegiatan menonton film bersama yang bertema pengetahuan alam, diikuti dengan sesi penjelasan materi oleh narasumber. Melalui tayangan visual yang menarik, anak-anak diajak memahami berbagai topik ilmu pengetahuan dengan cara yang menyenangkan dan mudah dicerna.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HABEL -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <img src="{{ asset('images/programedukasi/habel.png') }}" alt="HABEL" class="w-full h-64 object-cover rounded-lg edu-image">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">HABEL (Hayo Belajar Benda Langit)</h3>
+                            <p class="text-gray-600">
+                                Pengenalan ilmu astronomi dengan kegiatan mengamati matahari melalui teleskop, mempelajari benda langit, dan membuat roket air bersama narasumber seorang astronom. Program ini diperuntukkan bagi anak-anak SD dan SMP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -157,59 +250,5 @@
         });
     });
     </script>
-  <!-- Program Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Pilihan Program Kami</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Temukan program yang sesuai dengan kebutuhan edukasi Anda</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Program 1 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/jelajah-tanaman.jpg') }}" alt="Jelajah Tanaman" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Jelajah Tanaman</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-
-        <!-- Program 2 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/petani-cilik.jpg') }}" alt="Petani Cilik" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Petani Cilik</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Program khusus untuk anak usia 5-12 tahun belajar bercocok tanam dengan metode yang menyenangkan dan edukatif.</p>
-          </div>
-        </div>
-
-        <!-- Program 3 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/program/agro-edu.jpg') }}" alt="Agro Edu Tour" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Agro Edu Tour</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Paket wisata edukasi untuk keluarga dengan pengalaman langsung memanen dan mengolah hasil pertanian.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </body>
 </html>

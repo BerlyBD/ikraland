@@ -62,7 +62,7 @@
                     
                     <div class="dropdown group relative">
                         <button class="dropdown-btn flex items-center gap-1 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -190,7 +190,7 @@
             </div>
           </div>
           <div class="p-6">
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text-gray-600"> Bersepeda santai menyusuri jalur persawahan dan pedesaan dengan menikmati udara segar dan pemandangan alam yang asri.</p>
           </div>
         </div>
 
@@ -208,19 +208,6 @@
           </div>
         </div>
 
-        <!-- Program 4 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/rekreasi/panen-sayur.jpg') }}" alt="Panen Sayur" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Ngariung Di Lembur</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Pengalaman langsung memanen sayuran organik dari kebun kami.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>

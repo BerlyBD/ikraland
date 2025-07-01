@@ -71,7 +71,7 @@
           
           <div class="dropdown group relative">
             <button class="dropdown-btn flex items-center gap-1 font-medium">
-              Paket Program
+              Program Kami
               <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -108,7 +108,7 @@
           
           <div class="dropdown">
             <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
-              Paket Program
+              Program Kami
               <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>

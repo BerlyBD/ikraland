@@ -81,7 +81,7 @@
                     
                     <div class="dropdown group relative">
                         <button class="dropdown-btn flex items-center gap-1 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -118,7 +118,7 @@
                     
                     <div class="dropdown">
                         <button class="dropdown-btn w-full flex justify-between items-center px-4 py-2 font-medium">
-                            Paket Program
+                            Program Kami
                             <svg class="dropdown-arrow w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -180,9 +180,6 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12">
     <div class="flex-1 order-2 md:order-1">
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">IKRALAND</h1>
-      <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-    Ikraland adalah kawasan wakaf yang dikelola oleh Yayasan Wakaf IKRA Padjadjaran, berlokasi di Desa Padanaan, Kecamatan Paseh, Kabupaten Sumedang. Inisiatif ini dimulai sejak tahun 2018 dengan pembelian lahan seluas 6.000 m². Hingga kini, luas tanah wakaf telah berkembang menjadi 2,7 hektar dan dimanfaatkan untuk berbagai kegiatan produktif seperti pertanian, perikanan, dan edukasi lingkungan.
-        </p>
     </div>
     <div class="flex-1 order-1 md:order-2">
       <img src="{{ asset('images/IMG20220324110113_01.jpg') }}" alt="Kegiatan di IKRA Land" class="w-full rounded-lg shadow-xl transition-transform hover:scale-[1.02]" loading="lazy" />
