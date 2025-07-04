@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program Kesehatan - IKRALAND</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IKRALAND - Yayasan Sosial dan Lingkungan</title>
+  <meta name="description" content="IKRA adalah yayasan yang berkomitmen untuk meningkatkan kesejahteraan masyarakat melalui program pertanian, peternakan dan kegiatan sosial.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preload" href="{{ asset('images/logo.png') }}" as="image">
-     <style>
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.open {
-            max-height: 500px;
-            transition: max-height 0.5s ease-in;
-        }
-        .dropdown-content {
-            display: none;
-        }
-        .dropdown.active .dropdown-content {
-            display: block;
-        }
-        .dropdown.active .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-        .health-image {
-            transition: transform 0.3s ease;
-        }
-        .health-image:hover {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
-<body>
+<body class="bg-white text-gray-800 font-sans">
+ <style>
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.open {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+    .dropdown-content {
+      display: none;
+      /* Add padding to prevent gap between button and dropdown */
+      padding-top: 20px;
+      margin-top: -20px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+    .dropdown.active .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+    /* Create an invisible area to keep dropdown open when moving cursor */
+    .dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: transparent;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <!-- Top Bar -->
@@ -57,7 +70,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                        <div class="dropdown-content absolute hidden mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
                             <a href="/tentang/fasilitas" class="block px-4 py-2 hover:bg-gray-700">Fasilitas</a>
                             <a href="/pertanian" class="block px-4 py-2 hover:bg-gray-700">Pertanian</a>
                             <a href="/perikanan" class="block px-4 py-2 hover:bg-gray-700">Perikanan</a>
@@ -73,7 +86,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                        <div class="dropdown-content absolute hidden mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
                             <a href="/programedukasi" class="block px-4 py-2 hover:bg-gray-700">Program Edukasi</a>
                             <a href="/programrekreasi" class="block px-4 py-2 hover:bg-gray-700">Program Rekreasi</a>
                             <a href="/programkesehatan" class="block px-4 py-2 hover:bg-gray-700">Program Kesehatan</a>
@@ -123,6 +136,46 @@
         </div>
     </header>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', function() {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('open');
+            menuButton.textContent = isExpanded ? '☰' : '✕';
+        });
+        
+        // Mobile dropdown functionality
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (window.innerWidth >= 768) return;
+                
+                const dropdown = this.closest('.dropdown');
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('active');
+                });
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown') && window.innerWidth < 768) {
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+            }
+        });
+    });
+    </script>
     <!-- Hero Section -->
     <section class="relative bg-green-700 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,5 +315,6 @@
         });
     });
     </script>
+    @include('partials.footer')
 </body>
 </html>

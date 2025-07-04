@@ -8,29 +8,44 @@
   <link rel="preload" href="{{ asset('images/logo.png') }}" as="image">
 </head>
 <body class="bg-white text-gray-800 font-sans">
-
-    <style>
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.open {
-            max-height: 500px;
-            transition: max-height 0.5s ease-in;
-        }
-        .dropdown-content {
-            display: none;
-        }
-        .dropdown.active .dropdown-content {
-            display: block;
-        }
-        .dropdown.active .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-    </style>
+ <style>
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.open {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+    .dropdown-content {
+      display: none;
+      /* Add padding to prevent gap between button and dropdown */
+      padding-top: 20px;
+      margin-top: -20px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+    .dropdown.active .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+    /* Create an invisible area to keep dropdown open when moving cursor */
+    .dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: transparent;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-white text-gray-800 font-sans">
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <!-- Top Bar -->
@@ -54,7 +69,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                        <div class="dropdown-content absolute hidden mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
                             <a href="/tentang/fasilitas" class="block px-4 py-2 hover:bg-gray-700">Fasilitas</a>
                             <a href="/pertanian" class="block px-4 py-2 hover:bg-gray-700">Pertanian</a>
                             <a href="/perikanan" class="block px-4 py-2 hover:bg-gray-700">Perikanan</a>
@@ -70,7 +85,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-content absolute hidden group-hover:block mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
+                        <div class="dropdown-content absolute hidden mt-2 bg-gray-800 text-white rounded shadow-lg py-2 min-w-[200px]">
                             <a href="/programedukasi" class="block px-4 py-2 hover:bg-gray-700">Program Edukasi</a>
                             <a href="/programrekreasi" class="block px-4 py-2 hover:bg-gray-700">Program Rekreasi</a>
                             <a href="/programkesehatan" class="block px-4 py-2 hover:bg-gray-700">Program Kesehatan</a>
