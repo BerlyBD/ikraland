@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fasilitas - IKRALAND</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IKRALAND - Yayasan Sosial dan Lingkungan</title>
+  <meta name="description" content="IKRA adalah yayasan yang berkomitmen untuk meningkatkan kesejahteraan masyarakat melalui program pertanian, peternakan dan kegiatan sosial.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preload" href="{{ asset('images/logo.png') }}" as="image">
 </head>
