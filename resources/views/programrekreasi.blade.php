@@ -214,7 +214,7 @@
                 <!-- Program 2: Mulih ka Lembur -->
                 <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/rekreasi/mulih ka lembur - 1.jpg') }}" alt="Mulih ka Lembur" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/rekreasi/mulih1.jpg') }}" alt="Mulih ka Lembur" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-2xl font-bold text-white">Mulih ka Lembur</h3>
@@ -229,7 +229,7 @@
                 <!-- Program 3: Ngagogo Lauk -->
                 <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/rekreasi/ngagogo lauk - 1.jpg') }}" alt="Ngagogo Lauk" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/rekreasi/ngagogo1.jpg') }}" alt="Ngagogo Lauk" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-2xl font-bold text-white">Ngagogo Lauk</h3>
@@ -260,7 +260,6 @@
                             <img src="{{ asset('images/rekreasi/gowes1.jpg') }}" alt="Gowes 1" class="w-full h-48 object-cover rekreasi-image">
                             <img src="{{ asset('images/rekreasi/gowes2.jpg') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
                             <img src="{{ asset('images/rekreasi/gowes3.jpg') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
-                            <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400">Foto Tambahan</div>
                         </div>
                     </div>
                     <div class="md:w-2/3 p-8">
@@ -283,10 +282,10 @@
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/3">
                         <div class="grid grid-cols-2 gap-1">
-                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 1.jpg') }}" alt="Mulih 1" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 2.jpg') }}" alt="Mulih 2" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 3.jpg') }}" alt="Mulih 3" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 4.jpg') }}" alt="Mulih 4" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih1.jpg') }}" alt="Mulih 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih2.jpg') }}" alt="Mulih 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih3.jpg') }}" alt="Mulih 3" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih4.jpg') }}" alt="Mulih 4" class="w-full h-48 object-cover rekreasi-image">
                         </div>
                     </div>
                     <div class="md:w-2/3 p-8">
@@ -309,10 +308,9 @@
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/3">
                         <div class="grid grid-cols-2 gap-1">
-                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 1.jpg') }}" alt="Ngagogo 1" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 2.jpg') }}" alt="Ngagogo 2" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 3.jpg') }}" alt="Ngagogo 3" class="w-full h-48 object-cover rekreasi-image">
-                            <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400">Foto Tambahan</div>
+                            <img src="{{ asset('images/rekreasi/ngagogo1.jpg') }}" alt="Ngagogo 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/ngagogo2.jpg') }}" alt="Ngagogo 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/ngagogo3.jpg') }}" alt="Ngagogo 3" class="w-full h-48 object-cover rekreasi-image">
                         </div>
                     </div>
                     <div class="md:w-2/3 p-8">
