@@ -176,61 +176,164 @@
         });
     });
     </script>
-  <!-- Program Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Program Rekreasi Kami</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Nikmati pengalaman rekreasi yang menyenangkan dan edukatif</p>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Program 1 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/rekreasi/mulih-lembur.jpg') }}" alt="Mulih ka Lembur" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Mulih ka Lembur</h3>
+    <!-- Hero Section -->
+    <section class="relative bg-green-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Program Rekreasi IKRALAND</h1>
+                <p class="text-xl max-w-3xl mx-auto">Pengalaman rekreasi yang menyenangkan di alam pedesaan</p>
             </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
         </div>
+    </section>
 
-        <!-- Program 2 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/rekreasi/gowes-alam.jpg') }}" alt="Gowes Jelajah Alam" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Gowes Jelajah Alam</h3>
+    <!-- Program Highlights -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Program Unggulan Kami</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
             </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600"> Bersepeda santai menyusuri jalur persawahan dan pedesaan dengan menikmati udara segar dan pemandangan alam yang asri.</p>
-          </div>
-        </div>
 
-        <!-- Program 3 -->
-        <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
-          <div class="relative h-64 overflow-hidden">
-            <img src="{{ asset('images/rekreasi/ngagogo-lauk.jpg') }}" alt="Ngagogo Lauk" class="program-image w-full h-full object-cover transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl font-bold text-white">Ngagogo Lauk</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Program 1: Gowes Jelajah Alam -->
+                <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/rekreasi/gowes jelajah alam - 1.jpg') }}" alt="Gowes Jelajah Alam" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white">Gowes Jelajah Alam</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Bersepeda santai menyusuri jalur persawahan dan pedesaan dengan pemandangan alam yang asri.</p>
+                        <a href="#gowes" class="mt-4 inline-block text-green-600 font-medium">Selengkapnya →</a>
+                    </div>
+                </div>
+
+                <!-- Program 2: Mulih ka Lembur -->
+                <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/rekreasi/mulih ka lembur - 1.jpg') }}" alt="Mulih ka Lembur" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white">Mulih ka Lembur</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Pengalaman kembali ke desa dengan aktivitas tradisional yang menyenangkan.</p>
+                        <a href="#mulih" class="mt-4 inline-block text-green-600 font-medium">Selengkapnya →</a>
+                    </div>
+                </div>
+
+                <!-- Program 3: Ngagogo Lauk -->
+                <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/rekreasi/ngagogo lauk - 1.jpg') }}" alt="Ngagogo Lauk" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white">Ngagogo Lauk</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Pengalaman memancing tradisional dengan nuansa pedesaan yang autentik.</p>
+                        <a href="#ngagogo" class="mt-4 inline-block text-green-600 font-medium">Selengkapnya →</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Pengalaman memancing tradisional dengan nuansa pedesaan yang autentik.</p>
-          </div>
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
-  @include('partials.footer')
+    <!-- Detailed Program Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Detail Program Rekreasi</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+            </div>
+
+            <!-- Gowes Jelajah Alam -->
+            <div id="gowes" class="mb-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3">
+                        <div class="grid grid-cols-2 gap-1">
+                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 1.jpg') }}" alt="Gowes 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 2.jpg') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 3.jpg') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
+                            <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400">Foto Tambahan</div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Gowes Jelajah Alam</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aktivitas bersepeda santai menyusuri jalur persawahan dan pedesaan dengan menikmati udara segar dan pemandangan alam yang asri.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Rute melalui sawah dan perkebunan</li>
+                            <li>Pemandangan alam pedesaan yang indah</li>
+                            <li>Sarapan pagi dengan menu tradisional</li>
+                            <li>Pemandu lokal yang berpengalaman</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mulih ka Lembur -->
+            <div id="mulih" class="mb-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3">
+                        <div class="grid grid-cols-2 gap-1">
+                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 1.jpg') }}" alt="Mulih 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 2.jpg') }}" alt="Mulih 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 3.jpg') }}" alt="Mulih 3" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih ka lembur - 4.jpg') }}" alt="Mulih 4" class="w-full h-48 object-cover rekreasi-image">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mulih ka Lembur</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pengalaman kembali ke desa dengan berbagai aktivitas tradisional yang menyenangkan dan edukatif.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Pengenalan alat pertanian tradisional</li>
+                            <li>Praktik menanam padi</li>
+                            <li>Memasak dengan kayu bakar</li>
+                            <li>Kegiatan budaya Sunda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ngagogo Lauk -->
+            <div id="ngagogo" class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3">
+                        <div class="grid grid-cols-2 gap-1">
+                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 1.jpg') }}" alt="Ngagogo 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 2.jpg') }}" alt="Ngagogo 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/ngagogo lauk - 3.jpg') }}" alt="Ngagogo 3" class="w-full h-48 object-cover rekreasi-image">
+                            <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400">Foto Tambahan</div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Ngagogo Lauk</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pengalaman memancing tradisional di kolam atau sungai dengan nuansa pedesaan yang autentik.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Teknik memancing tradisional</li>
+                            <li>Pengenalan jenis ikan lokal</li>
+                            <li>Memasak hasil tangkapan</li>
+                            <li>Berinteraksi dengan nelayan lokal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @include('partials.footer')
 
 </body>
 </html>
