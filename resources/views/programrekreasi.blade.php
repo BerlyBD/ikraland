@@ -199,7 +199,7 @@
                 <!-- Program 1: Gowes Jelajah Alam -->
                 <div class="program-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/rekreasi/gowes jelajah alam - 1.jpg') }}" alt="Gowes Jelajah Alam" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/rekreasi/gowes1.jpg') }}" alt="Gowes Jelajah Alam" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-2xl font-bold text-white">Gowes Jelajah Alam</h3>
@@ -257,9 +257,9 @@
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/3">
                         <div class="grid grid-cols-2 gap-1">
-                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 1.jpg') }}" alt="Gowes 1" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 2.jpg') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/gowes jelajah alam - 3.jpg') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes1.jpg') }}" alt="Gowes 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes2.jpg') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes3.jpg') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
                             <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400">Foto Tambahan</div>
                         </div>
                     </div>
