@@ -282,10 +282,10 @@
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/3">
                         <div class="grid grid-cols-2 gap-1">
-                            <img src="{{ asset('images/rekreasi/mulih1.jpg') }}" alt="Mulih 1" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih2.jpg') }}" alt="Mulih 2" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih3.jpg') }}" alt="Mulih 3" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/mulih4.jpg') }}" alt="Mulih 4" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih1.png') }}" alt="Mulih 1" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih2.png') }}" alt="Mulih 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih3.png') }}" alt="Mulih 3" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/mulih4.png') }}" alt="Mulih 4" class="w-full h-48 object-cover rekreasi-image">
                         </div>
                     </div>
                     <div class="md:w-2/3 p-8">
