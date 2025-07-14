@@ -258,8 +258,8 @@
                     <div class="md:w-1/3">
                         <div class="grid grid-cols-2 gap-1">
                             <img src="{{ asset('images/rekreasi/gowes1.jpg') }}" alt="Gowes 1" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/gowes2.jpg') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
-                            <img src="{{ asset('images/rekreasi/gowes3.jpg') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes2.png') }}" alt="Gowes 2" class="w-full h-48 object-cover rekreasi-image">
+                            <img src="{{ asset('images/rekreasi/gowes3.png') }}" alt="Gowes 3" class="w-full h-48 object-cover rekreasi-image">
                         </div>
                     </div>
                     <div class="md:w-2/3 p-8">
