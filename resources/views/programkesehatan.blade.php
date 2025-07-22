@@ -176,15 +176,24 @@
         });
     });
     </script>
-    <!-- Hero Section -->
-    <section class="relative bg-green-700 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Program Kesehatan IKRALAND</h1>
-                <p class="text-xl max-w-3xl mx-auto">Meningkatkan derajat kesehatan masyarakat melalui berbagai program kesehatan yang terjangkau</p>
-            </div>
-        </div>
-    </section>
+<!-- Hero Section with Transparent Green Overlay -->
+<section class="relative h-96 flex items-center">
+    <!-- Background Image (will be visible through the overlay) -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Nature Background" 
+             class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Semi-transparent Green Overlay -->
+    <div class="absolute inset-0 bg-green-700 opacity-50"></div>
+    
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Program Kesehatan IKRALAND</h1>
+        <p class="text-xl max-w-3xl mx-auto text-green-100">Meningkatkan derajat kesehatan masyarakat melalui berbagai program kesehatan yang terjangkau</p>
+    </div>
+</section>
 
 
 

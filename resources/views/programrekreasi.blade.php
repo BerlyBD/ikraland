@@ -177,16 +177,24 @@
     });
     </script>
 
-    <!-- Hero Section -->
-    <section class="relative bg-green-700 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Program Rekreasi IKRALAND</h1>
-                <p class="text-xl max-w-3xl mx-auto">Pengalaman rekreasi yang menyenangkan di alam pedesaan</p>
-            </div>
-        </div>
-    </section>
-
+<!-- Hero Section Program Rekreasi -->
+<section class="relative h-96 flex items-center">
+    <!-- Background Image Tema Rekreasi Alam -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+             alt="Background Program Rekreasi" 
+             class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Semi-transparent Green Overlay -->
+    <div class="absolute inset-0 bg-green-600 opacity-50"></div>
+    
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Program Rekreasi IKRALAND</h1>
+        <p class="text-xl max-w-3xl mx-auto text-green-50">Petualangan seru dan menyenangkan di alam terbuka untuk seluruh keluarga</p>
+    </div>
+</section>
     <!-- Program Highlights -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
